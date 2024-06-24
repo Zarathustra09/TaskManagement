@@ -1,0 +1,161 @@
+body {
+  padding: 0px;
+  margin: auto;
+  background: rgb(0, 0, 0);
+  font-family: system-ui;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: rgb(242, 244, 247);
+}
+
+.sidebar {
+  min-width: 320px;
+  background: rgb(255, 255, 255);
+  padding: 24px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(102, 112, 133);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sidebar-header {
+  display: flex;
+  gap: 8px;
+  padding: 12px 10px;
+  align-items: center;
+}
+
+.sidebar-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-body > a {
+  text-decoration: none;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0px;
+  color: rgb(102, 112, 133);
+}
+
+.sidebar-body > a.active,
+.sidebar-body a:hover {
+  background: rgb(242, 244, 247);
+  color: rgb(29, 41, 57);
+  border-radius: 8px;
+}
+
+.sidebar-body a:hover .count,
+.sidebar-body > a.active .count {
+  background: #1d2939;
+  color: #ffffff;
+}
+
+.sidebar-body > a > div {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.sidebar-body .count {
+  background: rgb(242, 244, 247);
+  padding: 2.5px 6px;
+  color: rgb(52, 64, 84);
+  border-radius: 6px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  gap: 4rem;
+  padding: 2.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 1rem;
+  color: rgb(152, 162, 179);
+  font-size: 14px;
+  background: rgb(252, 252, 253);
+  box-shadow: rgb(16 24 40 / 30%) 0px 0.5px 2px;
+  border-radius: 8px;
+  max-width: 350px;
+  margin: 20px 0;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.card-footer .assigned {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.card-tags {
+  display: flex;
+  width: 100%;
+  gap: 0.2rem;
+}
+
+.card-tags label {
+  padding: 6px 12px;
+  background: rgb(242, 244, 247);
+  color: rgb(71, 84, 103);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 6px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.card-header h2 {
+  color: rgb(102, 112, 133);
+  font-weight: bold;
+  line-height: 18px;
+  font-size: 15px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}

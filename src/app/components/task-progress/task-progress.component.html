@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let task of tasksInProgress" (click)="navigateToUpdate(task.id)">
+      <div class="card">
+        <div class="card-header">
+          <h2>{{ task.title }}</h2>
+          <div class="card-info">
+            <span class="date">{{ formatDate(task.created_At) }}</span>
+            <span class="dot"></span>
+            <span class="author">Priority {{ task.priority }}</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>{{ task.description }}</p>
+          <div class="card-tags">
+            <label class="sc-gsDKAQ knmqvK" *ngFor="let tag of task.tags">{{ tag }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

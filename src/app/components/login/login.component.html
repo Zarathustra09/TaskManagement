@@ -1,0 +1,20 @@
+<body>
+<div class="container">
+  <div class="login-form">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input [type]="type" id="password" name="password" [(ngModel)]="password" required>
+        <i class="fa" [ngClass]="eyeIcon" (click)="hideShowPass()"></i>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p class="signup-link">Don't have an account? <a [routerLink]="['/registration']">Sign up</a></p>
+  </div>
+</div>
+</body>
